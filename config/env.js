@@ -83,12 +83,12 @@ function getClientEnvironment(publicUrl) {
     );
 
   // Twitch Dev Rig custom configs
-  // EXTENSION_CLIENT_ID and EXTENSION_SECRET
+  // EXT_CLIENT_ID and EXT_SECRET
   raw['EXT_CLIENT_ID'] = process.env.EXT_CLIENT_ID || '';
   raw['EXT_SECRET'] = process.env.EXT_SECRET || '';
   raw['EXT_VERSION'] = process.env.EXT_VERSION || '';
-  raw['EXT_CHANNEL_ID'] = process.env.EXT_CHANNEL || '';
-  raw['EXT_USER_NAME'] = process.env.EXT_OWNER_NAME || '';
+  raw['API_HOST'] = process.env.API_HOST || '';
+  raw['GIT_RELEASE'] = process.env.GIT_RELEASE || '';
 
   // Stringify all values so we can feed into Webpack DefinePlugin
   const stringified = {

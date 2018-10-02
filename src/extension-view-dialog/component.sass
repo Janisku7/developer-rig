@@ -7,11 +7,17 @@
 .new-extension-view__dialog
   @extend .dialog
 
+.new-extension-view__channel-id-label
+  margin-left: 20px
+
 .dialog__container
   @extend .container
 
 .dialog__divider
   @extend .dialog__divider-width
+  background-color: #DAD8DE
+  border: 0
+  height: 1px
 
 .dialog__top-bar-container
   @extend .top-bar
@@ -19,7 +25,7 @@
 .top-bar-container__title
   @extend .top-bar-element-left
   margin-top: 5px
-  font-weight: bold
+  font-size: 22px
 
 .top-bar-container__escape
   @extend .top-bar-element-right
@@ -31,15 +37,30 @@
 .dialog__type-and-size-container
   @extend .container
   min-height: 130px
+  margin-top: 10px
 
 .type-and-size-container__type-title
   @extend .container__left-block
-  @extend .title
-  width: 40%
+  font-size: 16px
+  font-weight: lighter
+  margin-top: 5px
+  margin-bottom: 5px
 
 .type-title__type-container
   @extend .container
+  flex-direction: column
+
+.dialog__type-container
+  @extend .container
+  margin-left: 20px
+  margin-top: 10px
   // the children of this live in div-option/
+
+.dialog__frame-properties-container
+  @extend .container
+  flex-direction: column
+  margin-left: 20px
+  margin-top: 10px
 
 .type-and-size-container__size-title
   @extend .container__right-block
@@ -49,12 +70,17 @@
 
 .size-title__size-subcontainer
   @extend .container
-  margin-top: 10px
+
+.size-subcontainer__presets-container
+  display: flex
+  margin-left: 20px
 
 .size-subcontainer__presets
   @extend .container__block
   height: 100%
-  width: 20%
+  display: flex
+  flex-direction: column
+  margin-left: 10px
   //children of this live in radio-option/
 
 .size-subcontainer__custom-subcontainer
@@ -67,6 +93,9 @@
 .custom-subcontainer__input
   margin-bottom: 5px
 
+.custom-subcontainer__input > input
+  width: 50px
+
 .inputs__option-label
   clear: left
   font-size: 12px
@@ -77,6 +106,8 @@
 
 .dialog__viewer-container
   @extend .container
+  margin-top: 25px
+  margin-bottom: 25px
 
 .viewer-container__viewer-block
   @extend .container__left-block
@@ -92,9 +123,19 @@
 
 .bottom-bar__save
   @include bottom-bar-box(white, #7D55C7)
-  margin: 1em
-  margin-left: 20px
 
 .bottom-bar__cancel
   @include bottom-bar-box(#7D55C7, white)
-  margin: 1em
+
+.overlay-custom-container
+  color: #706A7C
+  margin-left: 20px
+
+.size-subcontainer__size-selection
+  margin-right: 20px
+
+.opaque_id-input
+  font-size: 12px
+  margin-top: 5px
+  margin-left: 25px
+  color: #706A7C
